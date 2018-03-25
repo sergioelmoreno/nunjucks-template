@@ -1,0 +1,26 @@
+.wrapper {
+  overflow: hidden;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.wrapper svg.pattern {
+  display: block;
+  position: absolute;
+  width: 220%;
+  height: 220%;
+  opacity: 0.4;
+  top: -60%;
+  left: auto;
+  right: -59.82%;
+  bottom: auto;
+}
+.wrapper svg.pattern:first-of-type {
+  top: -60%;
+  left: -59.82%;
+  right: auto;
+  bottom: auto;
+}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+{% include "partials/_header-template.njk" %}
+<body>
+{% block content %}
+  <div class="content">
+    Default content    
+  </div>
+{% endblock %}
+{% for script in scripts -%}
+<script src="{{ script.vendor }}"></script>
+{%- endfor %}
+eo
+<script src="js/main.js"></script>
+</body>
+</html>

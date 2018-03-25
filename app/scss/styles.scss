@@ -1,0 +1,96 @@
+@import "_colors";
+
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Fira Mono", monospace;
+  font-size: 16px;
+}
+
+body {
+  background: $gray;
+}
+
+@import "_wrapper";
+header {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 16px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  z-index: 9999;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #191c1f;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.84;
+    pointer-events: none;
+    border-bottom: 1px solid #0f0f0f;
+  }
+}
+header .data a {
+  text-decoration: none;
+  font-size: 0.75rem;
+  color: #c1c8d4;
+}
+header .data a:hover {
+  cursor: crosshair;
+}
+header .data a ul {
+  list-style-type: none;
+}
+header .data a ul li:first-child::before {
+  content: "#";
+  color: #eb5757;
+}
+header .data a ul li::before {
+  color: #f2c94c;
+  content: ">";
+  display: inline-block;
+  margin-right: 0.3em;
+}
+header .data:hover ~ span a svg polygon {
+  stroke-opacity: 1;
+  fill-opacity: 0.2;
+  stroke-dasharray: 112;
+  animation-duration: 0.25s, 0.95s;
+  animation-timing-function: cubic-bezier(0, 1.36, 0.5, 0.51),
+    curve-bezier(0.29, 1, 0.6, 0);
+  animation-iteration-count: infinite, 1;
+  animation-name: dash, glow;
+}
+header .logo {
+  pointer-events: none;
+}
+header .logo svg {
+  width: 72px;
+  height: 72px;
+}
+header .logo svg polygon {
+  fill: #c1c8d4;
+  stroke: #2f80ed;
+  stroke-miterlimit: 1;
+  stroke-opacity: 0;
+  stroke-width: 1;
+}
+
+
+@import "_keyframes";

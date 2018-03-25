@@ -1,0 +1,21 @@
+{
+	"lang": "en",
+	"url": "http://www.sergioelmoreno.com",
+	"author": "Sergio Elmoreno",
+	"title": "Index - Another website",
+	"fonts": [
+		{"family": "https://fonts.googleapis.com/css?family=Fira+Mono:400,700"}
+	],
+	"scripts": [
+		{"vendor": "https://code.jquery.com/jquery-3.3.1.min.js"}
+	],
+	"styles": [
+		{"lib": null }
+	],
+	"menu": [
+		{"Index": "#index"},
+		{"Bio": "#bio"},
+		{"Works": "#works"},
+		{"Contact": "#contact"}
+	]
+}
